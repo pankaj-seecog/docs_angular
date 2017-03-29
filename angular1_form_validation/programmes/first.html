@@ -1,0 +1,60 @@
+<html>
+   
+   <head>
+      <title>AngularJS First Application</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+   <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+   
+   <style>
+   input.ng-invalid.ng-touched {
+   border : 1px solid red;
+   }
+   input.ng-valid.ng-touched {
+   border : 1px solid green;
+   }
+   input.ng-pristine {
+   border : 1px solid yellow;
+   }
+   .ng-invalid .btn {
+   background : gray
+   }
+   
+   .error {
+   color : red;
+   padding-bottom : 10px;
+   }
+   </style>
+   </head>
+   
+   <body ng-app="">
+      <div class="container">
+	  <div class="col-lg-12">Registration form
+	  </div>
+	  
+	  <form name="frm" novalidate>
+	  <div class="col-lg-12">
+	  <div class="form-group">
+	  <input name="first_name" ng-model="user.first_name" class="form-control" placeholder="First name" required ng-minlength="6">
+	  <p ng-show="frm.first_name.$touched && frm.first_name.$error.required">Please enter the username</p>
+	  </div>
+	  <div class="form-group">
+	  <input ng-model="user.last_name" class="form-control" placeholder="Last name">
+	  </div>
+	  <div class="form-group">
+	  <input type="email" name="email" ng-model="user.email" class="form-control" placeholder="Email" required>
+	  <p class="error" ng-if="frm.email.$dirty && frm.email.$error.required">Please enter  email</p>
+	  <p class="error" ng-if="frm.email.$dirty && frm.email.$error.email">Please enter valid email</p>
+	  </div>
+	  <div class="form-group">
+	  <input type="password" ng-model="user.password" class="form-control" placeholder="Password">
+	  </div>
+	  <div class="form-group">
+	  <button class="btn btn-primary">Register</button>
+	  </div>
+	  </div>	  
+	  </form>
+	  </div>
+      
+      
+   </body>
+</html>
