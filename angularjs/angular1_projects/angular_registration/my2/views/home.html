@@ -20,8 +20,8 @@ Hello {{user.first_name}} | <a ng-if="user.length!=0" href="#/login" ng-click="l
 <tr ng-repeat="x in meetings">
 <td>{{x.meeting_name}}</td><td>{{x.date}}</td>
 <td>
-<a class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a> 
-<a class="btn btn-primary" href="#joinmeeting/{{user.$id}}/{{x.$id}}"><span class="glyphicon glyphicon-plus"></span></a> 
+<a class="btn btn-danger" ng-if="user" ng-click="deleteMeeting(x.$id)"><span class="glyphicon glyphicon-trash"></span></a> 
+<a class="btn btn-primary" ng-if="user" href="#joinmeeting/{{user.$id}}/{{x.$id}}"><span class="glyphicon glyphicon-plus"></span></a> 
 <a class="btn btn-success" href="#meetingmemberlist/{{user.$id}}/{{x.$id}}"><span class="glyphicon glyphicon-list"></span></a>
 </td>
 </tr>

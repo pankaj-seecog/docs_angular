@@ -21,7 +21,7 @@ Order By :
 <th>First name </th><th>Last name</th><th>Email</th>
 <tr ng-repeat="x in memberList | orderBy : orderby | filter : key">
 <td>{{x.first_name}}</td><td>{{x.last_name}}</td><td>{{x.email}}</td>
-<td><button class="btn btn-danger" ng-click=""><span class="glyphicon glyphicon-trash"></span></button></td>
+<td><button ng-if="user" class="btn btn-danger" ng-click="deleteCheckIn(x.$id)"><span class="glyphicon glyphicon-trash"></span></button></td>
 </tr>
 </table>
 </div>
