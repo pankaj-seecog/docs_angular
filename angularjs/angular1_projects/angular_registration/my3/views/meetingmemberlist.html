@@ -1,0 +1,27 @@
+<div class="col-lg-12">
+<h1 class="text-primary">Meeting member list</h1>
+</div>
+
+
+<div class="col-lg-12">
+<input class="form-control" ng-model="key">
+</div>
+
+<div class="col-lg-6">
+Order By :
+<select ng-model="orderby" class="form-control">
+<option value="first_name">First Name</option>
+<option value="last_name">Last Name</option>
+</select>
+</div>
+<div class="col-lg-6"></div>
+
+<div class="col-lg-12">
+<table class="table">
+<th>First name </th><th>Last name</th><th>Email</th>
+<tr ng-repeat="x in memberList | orderBy : orderby | filter : key">
+<td>{{x.first_name}}</td><td>{{x.last_name}}</td><td>{{x.email}}</td>
+<td><button ng-if="user" class="btn btn-danger" ng-click="deleteCheckIn(x.$id)"><span class="glyphicon glyphicon-trash"></span></button></td>
+</tr>
+</table>
+</div>

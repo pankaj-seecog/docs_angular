@@ -1,0 +1,48 @@
+<html>
+<head>
+<!-- Angular -->
+ <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+ <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+  
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDGJ8v9NEFW_LKAhQ4z8nTHG9fjRhRtxyg",
+    authDomain: "myproject3-3a407.firebaseapp.com",
+    databaseURL: "https://myproject3-3a407.firebaseio.com",
+    projectId: "myproject3-3a407",
+    storageBucket: "myproject3-3a407.appspot.com",
+    messagingSenderId: "1048820099550"
+  };
+  firebase.initializeApp(config);
+</script>
+<!-- AngularFire -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<script>
+var app = angular.module('myApp',['ngRoute','firebase']);
+</script>
+<script src="scripts/authentication.js"></script>
+<script src="scripts/addmember.ctrl.js"></script>
+<script src="scripts/memberlist.ctrl.js"></script>
+<script src="scripts/joinmeeting.ctrl.js"></script>
+<script src="scripts/memberlist.ctrl.js"></script>
+<script src="scripts/register.ctrl.js"></script>
+<script src="scripts/home.ctrl.js"></script>
+<script src="scripts/login.ctrl.js"></script>
+<script src="scripts/routes.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-include="'views/menu.html'"></div>
+<div class="container">
+<div ng-view></div>
+</div>
+</body>
+
+</html>
