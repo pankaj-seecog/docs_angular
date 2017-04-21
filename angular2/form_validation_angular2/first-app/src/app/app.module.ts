@@ -19,6 +19,7 @@ import { FormValidation1Component } from './form-validation-1/form-validation-1.
 import { FormValidation2Component } from './form-validation-2/form-validation-2.component';
 import { FormValidationReactiveComponent } from './form-validation-reactive/form-validation-reactive.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { TemplateValidation21stAprilComponent } from './template-validation-21st-april/template-validation-21st-april.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     LifeprocessComponent,
     FormValidation1Component,
     FormValidation2Component,
-    FormValidationReactiveComponent
+    FormValidationReactiveComponent,
+    TemplateValidation21stAprilComponent
 	
   ],
   imports: [

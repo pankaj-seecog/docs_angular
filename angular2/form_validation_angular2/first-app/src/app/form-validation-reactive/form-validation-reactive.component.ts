@@ -18,8 +18,7 @@ signUp : FormGroup;
 	  });
   }
   
-  addRecord(){
-	  
+  addRecord(){	  
 	  console.log(this.signUp);
   }
   
