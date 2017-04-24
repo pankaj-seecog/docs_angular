@@ -30,8 +30,12 @@
             <td>
             <input type="checkbox" checked.bind="todo.done">    <img src.bind="todo.pic" width=40 height=40 class="img-circle">       
             </td>
-            <td><span css="text-decoration: ${todo.done ?'line-through':'none'}">${todo.description}</span></td>
             <td>
+                <span show.bind="!todo.edit" css="text-decoration: ${todo.done ?'line-through':'none'}">${todo.description}</span>
+                <input show.bind="todo.edit" class="form-control" value.bind="todo.description">
+            </td>
+            <td>
+            <button class="btn btn-primary" click.trigger="todo.edit=!todo.edit">${!todo.edit ? ' Update ' : ' Save '}</span></button> 
             <button class="btn btn-danger" click.trigger="removeTodo(todo)"><span class="glyphicon glyphicon-trash"></span></button>
             </td>
         </tr>
