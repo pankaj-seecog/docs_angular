@@ -1,3 +1,24 @@
 <p>
-  microvan works!
+  <img [src]="src" weight="100" height="100">
+  <button [disabled]="stt" (click)="done()">Click Here</button>
 </p>
+
+<span [innerHtml]="data"></span><br>
+<span  [ngClass]="['my','myTwo']" >Go byee go</span><br>
+<span  [ngClass]="{'my':true, 'myTwo':true}" >Go byee Three</span><br>
+<span [ngClass]="getClass()">Go byee four</span><br>
+<span [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">
+  style using ngStyle
+</span><br>
+<span [ngStyle]="{'color' : 'green','font-size':'20px'}">The getting email!</span>
+<br>
+
+<p>
+First Name : <input [ngModel]="email">{{email}}
+</p>
+<p>
+Last Name : <input [value]="last_name">
+</p>
+<button type="submit" >Click Here Again</button>
+
+

@@ -1,5 +1,33 @@
+<div class="container">
+<!--<div class="col-lg-12">
+<ul class="nav nav-tabs">
+<li role="presentation" class="active"><a href="/">Home</a></li>
+<li role="presentation"><a href="/users">Users</a></li>
+<li role="presentation"><a href="/servers">Servers</a></li>
+</ul>
+</div>
+-->
+
+<div class="col-lg-12">
+<ul class="nav nav-tabs">
+<li role="presentation" class="active"><a routerLink="/">Home</a></li>
+<li role="presentation"><a routerLink="/users">Users</a></li>
+<li role="presentation"><a [routerLink]="['/servers']">Servers</a></li>
+</ul>
+</div>
+
+<div class="col-lg-12">
+<router-outlet></router-outlet>
+</div>
+
+<!--<app-httpmodule2></app-httpmodule2>-->
+<!--<app-observable1></app-observable1>-->
+</div>
+<!--<app-microvan [first_name]="'Rohit'" [last_name]="'kumar'" (clickable)="showThis($event)" (secondClick)="secondShow($event)"></app-microvan>
+<app-httpmodule></app-httpmodule>
+
 <app-reactive-form-validation></app-reactive-form-validation>
-<!--
+
 <p>
 <app-template-validation-21st-april></app-template-validation-21st-april>
 </p>

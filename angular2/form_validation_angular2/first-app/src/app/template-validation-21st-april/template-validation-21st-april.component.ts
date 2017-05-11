@@ -11,7 +11,7 @@ export class TemplateValidation21stAprilComponent implements OnInit {
   private email = 'mohan@gmail.com';
   genders = ['male','female'];
   gender="male";
-  @ViewChild('f') signUp = NgForm;
+  @ViewChild('f') signUp : NgForm;
   constructor() { }
 
   ngOnInit() {

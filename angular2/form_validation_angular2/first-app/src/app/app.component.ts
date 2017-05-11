@@ -9,4 +9,10 @@ export class AppComponent {
   firstName = 'Mohan';
   lastName = 'Kumar';
   age = 21;
+  showThis(record : string){
+	  alert('The value is '+record)
+  }
+  secondShow(data:string){
+	  alert('The data is '+data)
+  }
 }

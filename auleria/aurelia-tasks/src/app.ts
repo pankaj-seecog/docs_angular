@@ -23,7 +23,9 @@ export class App {
  this.todos.splice(index,1);
  }
  }
+ 
  }
+ 
  /*router : Router;
   message = 'Hello World!';
   

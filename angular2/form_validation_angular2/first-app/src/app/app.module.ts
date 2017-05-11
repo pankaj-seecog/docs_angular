@@ -21,6 +21,20 @@ import { FormValidationReactiveComponent } from './form-validation-reactive/form
 import {ReactiveFormsModule} from '@angular/forms';
 import { TemplateValidation21stAprilComponent } from './template-validation-21st-april/template-validation-21st-april.component';
 import { ReactiveFormValidationComponent } from './reactive-form-validation/reactive-form-validation.component';
+import { HttpmoduleComponent } from './httpmodule/httpmodule.component';
+import { Httpmodule2Component } from './httpmodule2/httpmodule2.component';
+import { Observable1Component } from './observable1/observable1.component';
+import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+import { ServersComponent } from './servers/servers.component';
+import {Routes,RouterModule} from '@angular/router';
+
+const appRoutes : Routes = [
+{path : '',component : HomeComponent},
+{path : 'users',component : UsersComponent},	
+{path : 'servers',component : ServersComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,14 +53,21 @@ import { ReactiveFormValidationComponent } from './reactive-form-validation/reac
     FormValidation2Component,
     FormValidationReactiveComponent,
     TemplateValidation21stAprilComponent,
-    ReactiveFormValidationComponent
+    ReactiveFormValidationComponent,
+    HttpmoduleComponent,
+    Httpmodule2Component,
+    Observable1Component,
+    HomeComponent,
+    UsersComponent,
+    ServersComponent
 	
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-	ReactiveFormsModule
+	ReactiveFormsModule,
+	RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

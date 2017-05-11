@@ -1,0 +1,22 @@
+<form [formGroup]="signUp">
+<p>
+First name : <input formControlName="first_name" name="first_name">
+</p>
+
+<p>
+Last name : <input formControlName="last_name" name="last_name">
+</p>
+
+<p>
+<button (click)="addRecord()">Add Record</button>
+<button (click)="getRecord()">Get Record</button>
+</p>
+
+<table>
+<th>First Name</th><th>Last Name</th>
+<!--<tr *ngFor="let x of users">
+<td>{{x}}</td><td>{{x}}</td>
+</tr>-->
+</table>
+
+</form>
