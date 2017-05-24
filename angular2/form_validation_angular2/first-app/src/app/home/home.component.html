@@ -1,3 +1,25 @@
+
 <p>
-  home works!
+The amount is {{amount |currency:'IND':true}}<br>
+<!--The next amount will be {{amount | double : 4}} -->
+
+</p>
+<p>
+
+The duration is {{dur | smd }}
+
+</p>
+<p>
+<input [(ngModel)]="key">{{key}}
+</p>
+<div>
+<ul>
+<li *ngFor="let product of products | pankaj : key">
+{{product.id}} | {{product.name}} | {{product.cost}} | {{product.status}}
+</li>
+</ul>
+</div>
+<p>
+<button (click)="loadServer()">Load Server</button> 
+<button (click)="addProduct()">Add Product</button>
 </p>

@@ -11,5 +11,11 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  private users = [
+  {id : 1, name : 'Max'},
+  {id : 2 , name : 'Mark'},
+  {id : 3, name : 'Logan'}
+  ];
 
 }

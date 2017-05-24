@@ -12,13 +12,13 @@ export class Observable1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-	  //const myNumbers = Observable.interval(1000);
-	  const myNumbers = Observable.interval(1000).map(
+	 // const myNumbers = Observable.interval(1000);
+	  /*const myNumbers = Observable.interval(1000).map(
 	  (data : number)=>{
 		 console.log(data)
 	  }
 	  
-	  )
+	  )*/
 	 /* myNumbers.subscribe(
 	  (number : number)=>console.log(number),
 	  (error)=>console.log(error)
@@ -44,11 +44,11 @@ export class Observable1Component implements OnInit {
 		  },5000);
 	  });
 	  */
-	  myNumbers.subscribe(
+	 /* myNumbers.subscribe(
 	  (data : string)=>console.log(data),
 	  (error : string)=>console.log(error),
 	  ()=>'completed'
-	  )
+	  )*/
 	  
 	  
 		  

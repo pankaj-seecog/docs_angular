@@ -26,13 +26,20 @@ import { Httpmodule2Component } from './httpmodule2/httpmodule2.component';
 import { Observable1Component } from './observable1/observable1.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
+import { UserComponent } from './user/user.component';
 import { ServersComponent } from './servers/servers.component';
 import {Routes,RouterModule} from '@angular/router';
-
+import { InfoComponent } from './info/info.component';
+import {CapitalizePipe} from './home/duration.pipe';
+import {ShortenPipe} from './home/shorten.pipe';
+//import {DoublePipe} from './home/double.pipe';
+import {PankajPipe} from './home/pankaj.pipe';
 const appRoutes : Routes = [
 {path : '',component : HomeComponent},
 {path : 'users',component : UsersComponent},	
-{path : 'servers',component : ServersComponent}
+{path : 'users/:id',component : UserComponent},
+{path : 'servers',component : ServersComponent},
+{path : 'info',component : InfoComponent}
 ];
 
 @NgModule({
@@ -59,8 +66,13 @@ const appRoutes : Routes = [
     Observable1Component,
     HomeComponent,
     UsersComponent,
-    ServersComponent
-	
+	UserComponent,
+    ServersComponent,
+    InfoComponent,
+	CapitalizePipe,
+	ShortenPipe,
+	//DoublePipe,
+	PankajPipe
   ],
   imports: [
     BrowserModule,
