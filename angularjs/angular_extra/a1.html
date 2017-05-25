@@ -1,0 +1,37 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+<p>
+The time is : {{data.time}}
+</p>
+<p>
+<button ng-click="updateTime1()">Try 1</button>
+</p>
+<p>
+<button id="updateTime2">Try 2</button>
+</p>
+</body>
+<script>
+var app = angular.module('myApp',[]);
+app.controller('myController',function($scope){
+$scope.data = {time : new Date()};
+$scope.updateTime1 = function(){
+$scope.data.time = new Date();
+}
+document.getElementById('updateTime2').addEventListener('click',function(){
+/*$scope.data.time = new Date();
+$scope.$digest();
+});*/
+
+$scope.$apply(function(){
+$scope.data.time = new Date();
+});
+
+});
+
+
+});
+</script>
+</html>

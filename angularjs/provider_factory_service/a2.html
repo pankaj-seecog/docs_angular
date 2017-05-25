@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+
+<button ng-click="showData()">Show Data </button> <br>
+{{data}}
+</body>
+<script>
+var app = angular.module('myApp',[]);
+app.provider('firebaseConfig',function(){
+var url = '';
+this.setUrl = function(urlVal){
+url = urlVal;
+}
+this.$get = function(){
+return {url : url};
+}
+
+});
+
+app.config(function(firebaseConfigProvider){
+firebaseConfigProvider.setUrl('https://books-ad908.firebaseio.com/products.json');
+});
+
+app.controller('myController',function($scope,firebaseConfig,$http){
+$scope.url = firebaseConfig.url;
+
+$scope.showData = function(){
+$http.get(firebaseConfig.url).then(function(res){
+$scope.data = res;
+}).catch(function(err){
+console.log('The error is ')
+console.log(err)
+});
+
+}
+
+})
+</script>
+</html>

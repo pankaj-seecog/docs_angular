@@ -1,0 +1,45 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+
+The password is {{password}}<br>
+The name is {{name}}
+</body>
+<script>
+var app = angular.module('myApp',[]);
+app.provider('mySetting2',function(){
+var nm = '';
+this.setData = function(namePar){
+nm = namePar;
+}
+this.$get = function(){
+return {name : nm};
+}
+
+});
+
+app.config(function(mySetting2Provider){
+mySetting2Provider.setData('@@@123');
+});
+
+
+app.config(function($provide){
+
+$provide.provider('mySetting',function(){
+var pass = "##`123";
+this.$get = function(){
+return {password : pass};
+}
+
+});
+
+});
+
+app.controller('myController',function($scope,mySetting,mySetting2){
+$scope.password = mySetting.password;
+$scope.name = mySetting2.name;
+});
+</script>
+</html>
