@@ -34,12 +34,16 @@ import {CapitalizePipe} from './home/duration.pipe';
 import {ShortenPipe} from './home/shorten.pipe';
 //import {DoublePipe} from './home/double.pipe';
 import {PankajPipe} from './home/pankaj.pipe';
+import { Filter2Component } from './filter-2/filter-2.component';
+import {KeyPipe} from './filter-2/key.pipe';
+import {DoublePipe} from './filter-2/double.pipe';
 const appRoutes : Routes = [
 {path : '',component : HomeComponent},
 {path : 'users',component : UsersComponent},	
 {path : 'users/:id',component : UserComponent},
 {path : 'servers',component : ServersComponent},
-{path : 'info',component : InfoComponent}
+{path : 'info',component : InfoComponent},
+{path : 'products',component : Filter2Component}
 ];
 
 @NgModule({
@@ -72,7 +76,10 @@ const appRoutes : Routes = [
 	CapitalizePipe,
 	ShortenPipe,
 	//DoublePipe,
-	PankajPipe
+	PankajPipe,
+	Filter2Component,
+	KeyPipe,
+	DoublePipe
   ],
   imports: [
     BrowserModule,

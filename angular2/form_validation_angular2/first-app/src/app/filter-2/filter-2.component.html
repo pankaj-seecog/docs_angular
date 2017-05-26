@@ -1,0 +1,14 @@
+<p>
+<input [(ngModel)]="key">
+</p>
+<p>
+<button (click)="addProduct()">Add Product</button>
+</p>
+<table>
+<th>Id</th><th>Name</th><th>Cost</th>
+<tr *ngFor="let product of products | datapipe : key">
+<td>{{product.id}}</td>
+<td>{{product.product_name}}</td>
+<td>{{product.product_price| double}}</td>
+</tr>
+</table>
