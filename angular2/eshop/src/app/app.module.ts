@@ -5,12 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-import {ReversePipe} from './user/reverse.pipe';
+import {DoublePipe} from './pipes/double.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-	ReversePipe
+    UserComponent
   ],
   imports: [
     BrowserModule,
