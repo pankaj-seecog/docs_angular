@@ -16,6 +16,29 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
+	  console.log('Start')
+	  this.getUser().then(function(data){
+		  console.log('The casual data is ')
+		  console.log(data)
+		  
+	  }).catch(function(err){
+		 console.log('The error is ') 
+		 console.log(err) 
+	  });
   }
+  
+  getUser(){
+	  
+	  return new Promise((resolve,reject)=>{
+		  
+		  setTimeout(()=>{
+			  resolve('Got users data')
+		  },20000);
+		  
+	  })
+	  
+  }
+  
+  
 
 }
