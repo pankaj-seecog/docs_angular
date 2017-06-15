@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 /*import {UserService} from './user.service';
 import {CalculatorService} from './calculator.service';
 import {DataService} from './data.service';*/
+import {Observable} from 'rxjs/Observable';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
