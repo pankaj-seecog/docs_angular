@@ -37,12 +37,15 @@ import {PankajPipe} from './home/pankaj.pipe';
 import { Filter2Component } from './filter-2/filter-2.component';
 import {KeyPipe} from './filter-2/key.pipe';
 import {DoublePipe} from './filter-2/double.pipe';
+import { TestcomponentComponent } from './testcomponent/testcomponent.component';
+import {MyColor} from './directives/color.directive';
+import { GrossComponent } from './gross/gross.component';
 const appRoutes : Routes = [
 {path : '',component : HomeComponent},
 {path : 'users',component : UsersComponent},	
 {path : 'users/:id',component : UserComponent},
 {path : 'servers',component : ServersComponent},
-{path : 'info',component : InfoComponent},
+{path : 'gross',component : GrossComponent},
 {path : 'products',component : Filter2Component}
 ];
 
@@ -79,7 +82,10 @@ const appRoutes : Routes = [
 	PankajPipe,
 	Filter2Component,
 	KeyPipe,
-	DoublePipe
+	DoublePipe,
+	TestcomponentComponent,
+	MyColor,
+	GrossComponent
   ],
   imports: [
     BrowserModule,
