@@ -1,0 +1,43 @@
+<div class="jumbotron">
+<div class="container">
+<h1>Find a movie</h1>
+<p>
+Search for your favourite movie
+</p>
+<form (submit)="searchMovie()">
+<input class="form-control" [(ngModel)]="search" name="search">
+<br>
+<button class="btn btn-primary">Search</button>
+</form>
+</div>
+</div>
+
+<!--Separate -->
+
+<div class="panel panel-default">
+
+<div class="panel-heading">
+<h2 class="panel-title">Movie Album</h2>
+</div>
+
+<div class="panel-body">
+<div class="row">
+
+<div *ngFor="let movie of popularMovies;let i = index;" class="col-md-2">
+
+<div *ngIf="i<6">
+<img *ngIf="movie.poster_path" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="thumbnail">
+<h3>{{movie.title}}</h3>
+<p>
+{{movie.release_date}}
+</p>
+<p>
+<button class="btn btn-default">View Details</button>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>

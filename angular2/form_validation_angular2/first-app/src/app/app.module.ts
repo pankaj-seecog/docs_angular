@@ -40,6 +40,9 @@ import {DoublePipe} from './filter-2/double.pipe';
 import { TestcomponentComponent } from './testcomponent/testcomponent.component';
 import {MyColor} from './directives/color.directive';
 import { GrossComponent } from './gross/gross.component';
+import {Double} from './pipes/double.pipe';
+import {Background} from './directives/background.directive';
+
 const appRoutes : Routes = [
 {path : '',component : HomeComponent},
 {path : 'users',component : UsersComponent},	
@@ -85,7 +88,9 @@ const appRoutes : Routes = [
 	DoublePipe,
 	TestcomponentComponent,
 	MyColor,
-	GrossComponent
+	GrossComponent,
+	Double,
+	Background
   ],
   imports: [
     BrowserModule,
