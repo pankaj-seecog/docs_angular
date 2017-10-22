@@ -1,0 +1,29 @@
+.Second{
+
+text-align: center;
+margin-top: 10px;
+font-size: 20px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Second-Title{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 25px;
+
+}
+
+.Display-days{
+    display : inline;
+}
+
+.Display-months {
+    display : inline;
+}
+
+.Display-hours {
+    display : inline;
+}
+
+.Display-seconds {
+    display : inline;
+}
